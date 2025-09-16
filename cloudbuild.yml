@@ -1,0 +1,13 @@
+steps:
+  # SSH into backend VM and deploy
+  - name: gcr.io/cloud-builders/gcloud
+    entrypoint: bash
+    args:
+      - -c
+      - |
+        gcloud compute ssh backend --zone=asia-south1-b --command="
+          cd ~/taskmaster-backend &&
+          git pull origin main &&
+          npm install &&
+          pm2 restart taskmaster-backend || pm2 start server.js --name taskmaster-backend
+        "
