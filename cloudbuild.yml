@@ -1,4 +1,6 @@
 steps:
+options:
+  logging: CLOUD_LOGGING_ONLY
   # SSH into backend VM and deploy
   - name: gcr.io/cloud-builders/gcloud
     entrypoint: bash
