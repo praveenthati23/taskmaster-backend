@@ -5,9 +5,10 @@ steps:
     args:
       - -c
       - |
-        gcloud compute ssh backend --zone=asia-south1-b --command="
+        gcloud compute ssh backend --zone=us-central1-a --command="
           cd ~/taskmaster-backend &&
-          git pull origin main &&
+          git fetch origin dev &&
+          git reset --hard origin/dev &&
           npm install &&
           pm2 restart taskmaster-backend || pm2 start server.js --name taskmaster-backend
         "
