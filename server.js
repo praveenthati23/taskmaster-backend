@@ -3,7 +3,7 @@ const app = express();
 const PORT = 5000;
 
 app.get('/', (req, res) => {
-  res.send('Hello from backend root. Hit /api/greeting');
+  res.send('Hello from backend and welcome to gcp cicd triggers root. Hit /api/greeting');
 });
 
 app.get('/api/greeting', (req, res) => {
