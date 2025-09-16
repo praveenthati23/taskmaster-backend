@@ -8,7 +8,7 @@ app.get('/', (req, res) => {
 
 app.get('/api/greeting', (req, res) => {
   res.json({
-    message: "Hello from backend",
+    message: "Hello from backend and welcome to gcp triggers",
     time: new Date().toISOString()
   });
 });
