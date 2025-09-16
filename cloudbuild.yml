@@ -7,8 +7,8 @@ steps:
     args:
       - -c
       - |
-        gcloud compute ssh backend --zone=us-central1-a --command="
-          cd ~/taskmaster-backend &&
+        gcloud compute ssh praveenkumar_thati23a@backend --zone=us-central1-a --command="
+          cd /home/praveenkumar_thati23a/taskmaster-backend &&
           git fetch origin dev &&
           git reset --hard origin/dev &&
           npm install &&
